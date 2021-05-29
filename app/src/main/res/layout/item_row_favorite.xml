@@ -25,7 +25,7 @@
             android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circle_image"
+                android:id="@+id/img_photo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -39,15 +39,15 @@
                 tools:src="@android:color/darker_gray" />
 
             <TextView
-                android:id="@+id/tv_username"
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/circle_image"
-                app:layout_constraintStart_toEndOf="@+id/circle_image"
-                app:layout_constraintTop_toTopOf="@+id/circle_image"
+                app:layout_constraintBottom_toBottomOf="@+id/img_photo"
+                app:layout_constraintStart_toEndOf="@+id/img_photo"
+                app:layout_constraintTop_toTopOf="@+id/img_photo"
                 tools:text="username" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

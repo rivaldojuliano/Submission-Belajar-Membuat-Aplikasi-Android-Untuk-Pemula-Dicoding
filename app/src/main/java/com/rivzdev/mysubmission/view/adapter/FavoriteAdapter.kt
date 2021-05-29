@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.rivzdev.mysubmission.databinding.ItemRowFoodBinding
+import com.rivzdev.mysubmission.databinding.ItemRowFavoriteBinding
 import com.rivzdev.mysubmission.model.Food
 
 class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
@@ -20,11 +20,11 @@ class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>(
             notifyDataSetChanged()
         }
 
-    inner class FavoriteViewHolder(private val binding: ItemRowFoodBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class FavoriteViewHolder(private val binding: ItemRowFavoriteBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(food: Food) {
             with(binding) {
                 Glide.with(itemView.context)
-                    .load(food.detail)
+                    .load(food.photo)
                     .apply(RequestOptions().override(100, 100))
                     .into(imgPhoto)
 
@@ -34,7 +34,7 @@ class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
-        val binding = ItemRowFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemRowFavoriteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FavoriteViewHolder(binding)
     }
 
