@@ -21,7 +21,7 @@ class ListFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
             with(binding) {
                 Glide.with(itemView.context)
                     .load(food.photo)
-                    .apply(RequestOptions().override(60, 60))
+                    .apply(RequestOptions().override(100, 100))
                     .into(imgPhoto)
 
                 tvName.text = food.name
