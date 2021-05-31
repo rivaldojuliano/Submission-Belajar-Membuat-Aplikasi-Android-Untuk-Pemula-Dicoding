@@ -28,6 +28,8 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = " Daftar Favorit"
+
         binding.apply {
             rvFavorite.layoutManager = LinearLayoutManager(this@FavoriteActivity)
             rvFavorite.setHasFixedSize(true)

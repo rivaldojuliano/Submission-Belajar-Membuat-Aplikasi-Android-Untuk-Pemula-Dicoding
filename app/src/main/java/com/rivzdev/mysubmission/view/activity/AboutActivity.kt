@@ -13,6 +13,6 @@ class AboutActivity : AppCompatActivity() {
         binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "About"
+        supportActionBar?.title = "Tentang"
     }
 }

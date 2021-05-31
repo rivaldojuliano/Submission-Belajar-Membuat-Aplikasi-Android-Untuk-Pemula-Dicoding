@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Makanan"
+        supportActionBar?.title = "Daftar Makanan"
 
         binding.rvFood.setHasFixedSize(true)
         list.addAll(FoodData.listData)
