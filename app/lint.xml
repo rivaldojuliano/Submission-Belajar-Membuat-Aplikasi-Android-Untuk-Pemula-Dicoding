@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/awug.jpg" />
+        <ignore path="src/main/res/drawable/bakakak.jpg" />
+        <ignore path="src/main/res/drawable/empal_gentong.jpg" />
+        <ignore path="src/main/res/drawable/gepuk.jpg" />
+        <ignore path="src/main/res/drawable/karedok.jpg" />
+        <ignore path="src/main/res/drawable/lotek.jpg" />
+        <ignore path="src/main/res/drawable/mie_kocok.jpg" />
+        <ignore path="src/main/res/drawable/nasi_timbel.jpg" />
+        <ignore path="src/main/res/drawable/nasi_tutug.jpg" />
+        <ignore path="src/main/res/drawable/profil.jpg" />
+        <ignore path="src/main/res/drawable/profile.jpg" />
+        <ignore path="src/main/res/drawable/restaurant.png" />
+        <ignore path="src/main/res/drawable/rivaldo.jpg" />
+        <ignore path="src/main/res/drawable/sate_maranggi.jpg" />
+    </issue>
+</lint>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red_500"
-    tools:context=".view.activity.SplashScreenActivity">
+    tools:context=".view.activity.SplashScreenActivity"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/makanan_tradisional_sunda"
+        android:text="@string/title"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
