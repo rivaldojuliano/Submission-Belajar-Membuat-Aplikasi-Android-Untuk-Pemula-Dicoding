@@ -3,6 +3,7 @@ package com.rivzdev.mysubmission.db
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.rivzdev.mysubmission.db.DatabaseContract.FavoriteColumns.Companion.FOOD_DETAIL
 import com.rivzdev.mysubmission.db.DatabaseContract.FavoriteColumns.Companion.NAME_FOOD
 import com.rivzdev.mysubmission.db.DatabaseContract.FavoriteColumns.Companion.PHOTO_FOOD
 import com.rivzdev.mysubmission.db.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
@@ -15,8 +16,9 @@ internal class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATAB
 
         private const val SQL_CREATE_TABLE_FAVORITE = "CREATE TABLE $TABLE_NAME" +
                 "($NAME_FOOD TEXT NOT NULL," +
-                "$PHOTO_FOOD INTEGER)"
-    }
+                "$PHOTO_FOOD INTEGER," +
+                "$FOOD_DETAIL TEXT NOT NULL)"
+            }
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(SQL_CREATE_TABLE_FAVORITE)

@@ -14,7 +14,8 @@ object MappingHelper {
             while (moveToNext()) {
                 val nameFood = getString(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.NAME_FOOD))
                 val photoFood = getInt(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.PHOTO_FOOD))
-                favoriteList.add(Food(nameFood, photoFood))
+                val foodDetail = getString(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.FOOD_DETAIL))
+                favoriteList.add(Food(nameFood, photoFood, foodDetail))
             }
         }
         return favoriteList

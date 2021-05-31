@@ -31,7 +31,7 @@ class FavoriteActivity : AppCompatActivity() {
         binding.apply {
             rvFavorite.layoutManager = LinearLayoutManager(this@FavoriteActivity)
             rvFavorite.setHasFixedSize(true)
-            adapter = FavoriteAdapter()
+            adapter = FavoriteAdapter(this@FavoriteActivity)
             adapter.notifyDataSetChanged()
             rvFavorite.adapter = adapter
         }
@@ -66,5 +66,10 @@ class FavoriteActivity : AppCompatActivity() {
                 adapter.listFood = ArrayList()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadFavoriteAsync()
     }
 }

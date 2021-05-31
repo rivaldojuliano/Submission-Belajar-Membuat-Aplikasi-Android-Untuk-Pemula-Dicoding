@@ -10,6 +10,7 @@ internal class DatabaseContract {
             const val TABLE_NAME = "favorite"
             const val NAME_FOOD = "name_food"
             const val PHOTO_FOOD = "photo_food"
+            const val FOOD_DETAIL = "food_detail"
         }
     }
 }

@@ -35,6 +35,7 @@ class DetailActivity : AppCompatActivity() {
         val values = ContentValues()
         values.put(DatabaseContract.FavoriteColumns.NAME_FOOD, food.name)
         values.put(DatabaseContract.FavoriteColumns.PHOTO_FOOD, food.photo)
+        values.put(DatabaseContract.FavoriteColumns.FOOD_DETAIL, food.detail)
 
         binding.apply {
             imgPhoto.setImageResource(food.photo)

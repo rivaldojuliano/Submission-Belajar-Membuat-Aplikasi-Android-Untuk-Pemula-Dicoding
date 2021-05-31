@@ -1,5 +1,7 @@
 package com.rivzdev.mysubmission.view.adapter
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,8 +9,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.rivzdev.mysubmission.databinding.ItemRowFavoriteBinding
 import com.rivzdev.mysubmission.model.Food
+import com.rivzdev.mysubmission.view.activity.DetailActivity
 
-class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
+class FavoriteAdapter(private val activity: Activity): RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
     var listFood = ArrayList<Food>()
 
@@ -29,6 +32,13 @@ class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>(
                     .into(imgPhoto)
 
                 tvName.text = food.name
+                tvDetail.text = food.detail
+
+                cvItemFavorite.setOnClickListener {
+                    val mIntent = Intent(activity, DetailActivity::class.java)
+                    mIntent.putExtra(DetailActivity.EXTRA_FOOD, food)
+                    activity.startActivity(mIntent)
+                }
             }
         }
     }
