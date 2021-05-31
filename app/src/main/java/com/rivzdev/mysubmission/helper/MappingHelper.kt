@@ -13,7 +13,7 @@ object MappingHelper {
         favoriteCursor?.apply {
             while (moveToNext()) {
                 val nameFood = getString(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.NAME_FOOD))
-                val photoFood = getString(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.PHOTO_FOOD))
+                val photoFood = getInt(getColumnIndexOrThrow(DatabaseContract.FavoriteColumns.PHOTO_FOOD))
                 favoriteList.add(Food(nameFood, photoFood))
             }
         }

@@ -1,8 +1,8 @@
 package com.rivzdev.mysubmission.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rivzdev.mysubmission.databinding.ActivityFavoriteBinding
 import com.rivzdev.mysubmission.db.FavoriteHelper

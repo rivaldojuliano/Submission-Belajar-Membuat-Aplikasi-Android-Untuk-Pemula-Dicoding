@@ -15,7 +15,7 @@ internal class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATAB
 
         private const val SQL_CREATE_TABLE_FAVORITE = "CREATE TABLE $TABLE_NAME" +
                 "($NAME_FOOD TEXT NOT NULL," +
-                "$PHOTO_FOOD TEXT NOT NULL)"
+                "$PHOTO_FOOD INTEGER)"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
