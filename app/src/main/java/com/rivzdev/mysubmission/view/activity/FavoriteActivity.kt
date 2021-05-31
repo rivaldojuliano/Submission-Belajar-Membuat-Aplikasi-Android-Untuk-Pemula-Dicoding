@@ -2,6 +2,7 @@ package com.rivzdev.mysubmission.view.activity
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rivzdev.mysubmission.databinding.ActivityFavoriteBinding
@@ -55,6 +56,7 @@ class FavoriteActivity : AppCompatActivity() {
 
     private fun loadFavoriteAsync() {
         GlobalScope.launch(Dispatchers.Main) {
+            showLoading(true)
             val favoriteHelper = FavoriteHelper.getInstance(applicationContext)
             favoriteHelper.open()
             val deferredFavorite = async(Dispatchers.IO) {
@@ -62,6 +64,7 @@ class FavoriteActivity : AppCompatActivity() {
                 MappingHelper.mapCursorToArrayList(cursor)
             }
             val favorite = deferredFavorite.await()
+            showLoading(false)
             if (favorite.size > 0) {
                 adapter.listFood = favorite
             } else {
@@ -72,6 +75,15 @@ class FavoriteActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        showLoading(true)
         loadFavoriteAsync()
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 }
